@@ -1,29 +1,30 @@
 public class ArrayTask {
-
-
-    public static int sumEven(int[] a){ 
-        int even = 0;
-        for(int i = 0; i < a.length; i++){
-            if(i % 2 == 0){
-                even += a[i];
-            }
+    public static int[] differenceArray (int[] inputArray) {
+        int average = 0;
+        int sum = 0;
+        for (int i = 0; i < inputArray.length; i++) {
+            sum += inputArray[i];
         }
-        return even;
-    }
-
-    public static int sumOdd(int[] a){
-        int odd = 0;
-        for(int i = 0; i < a.length; i++){
-            if(i % 2 != 0){
-                odd += a[i];
-            }
+        average = sum / inputArray.length;
+        int[] newArray = new int[inputArray.length];
+        for ( int i =0 ; i < newArray.length ; i++) {
+            newArray[i] = inputArray[i]-average;
         }
-        return odd;
+        return newArray;
+    }
+    public static int average ( int[] array) {
+        int average = 0;
+        int sum = 0;
+        for (int i = 0; i < array.length; i++) {
+            sum += array[i];
+        }
+        average = sum / array.length;
+        return average;
+
     }
 
-    public static void main(String[] args) {
-        int[] a = {1,2,3,4,5};
-        System.out.println(sumEven(a));
-    }
-    
+
+
+
+
 }
