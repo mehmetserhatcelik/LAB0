@@ -1,25 +1,24 @@
-public class ArrayTask{
+public class ArrayTask {
 
-    public static int maximumIntArray(int[] array){
-        int maximum = 0;
 
-        for(int i=0;i<array.length;i++){
-            if(array[i]>maximum){
-                maximum=array[i];
+    public static int sumEven(int[] a){ 
+        int even = 0;
+        for(int i = 0; i < a.length; i++){
+            if(a[i] % 2 == 0){
+                even += a[i];
             }
         }
-        return maximum;
+        return even;
+    }
+
+    public static int sumOdd(int[] a){
+        int odd = 0;
+        for(int i = 0; i < a.length; i++){
+            if(a[i] % 2 != 0){
+                odd += a[i];
+            }
+        }
+        return odd;
     }
     
-    public static int minimumIntArray(int[] array){
-        int minimum = 100;
-
-        for(int i=0;i<array.length;i++){
-            if(array[i]<minimum){
-                minimum=array[i];
-            }
-        }
-        return minimum;
-    }
-
 }
