@@ -122,5 +122,6 @@ public class ArrayTask {
             }
         }
         return minimum;
+        //comment block
     }
 }
